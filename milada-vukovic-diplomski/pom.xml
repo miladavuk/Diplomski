@@ -72,7 +72,7 @@
 	<!-- TO DO: Add support for Maven WAR Plugin -->
 
 	<build>
-		<finalName>spring-security-demo</finalName>
+		<finalName>milada-vukovic-diplomski</finalName>
 	
 		<pluginManagement>
 			<plugins>
