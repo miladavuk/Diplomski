@@ -2,7 +2,7 @@
                 
     
     
-    <wb-module deploy-name="milada-vukovic-diplomski">
+    <wb-module deploy-name="spring-security-demo">
                                 
         
         
@@ -20,8 +20,7 @@
         
         
         <property name="java-output-path" value="/springsecurity.demo/target/classes"/>
-                
-        <property name="context-root" value="milada-vukovic-diplomski"/>
+        <property name="context-root" value="spring-security-demo"/>
                             
     
     

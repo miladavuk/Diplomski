@@ -41,6 +41,13 @@
 		    <version>${springsecurity.version}</version>
 		</dependency>	
 		
+		<!-- Add Spring Security Taglibs support -->
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-taglibs</artifactId>
+		    <version>${springsecurity.version}</version>
+		</dependency>	
+		
 		<!-- Add MySQL and C3P0 support -->
 
 		<dependency>
@@ -54,6 +61,7 @@
 			<artifactId>c3p0</artifactId>
 			<version>0.9.5.2</version>
 		</dependency>
+				
 		
 		<!-- Servlet, JSP and JSTL support -->
 		<dependency>
@@ -86,7 +94,7 @@
 	<!-- TO DO: Add support for Maven WAR Plugin -->
 
 	<build>
-		<finalName>milada-vukovic-diplomski</finalName>
+		<finalName>spring-security-demo</finalName>
 	
 		<pluginManagement>
 			<plugins>
@@ -99,6 +107,5 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-
 
 </project>
