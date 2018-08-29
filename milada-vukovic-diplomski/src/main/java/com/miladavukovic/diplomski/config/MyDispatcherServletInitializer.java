@@ -20,6 +20,7 @@ public class MyDispatcherServletInitializer extends AbstractAnnotationConfigDisp
 	protected String[] getServletMappings() {
 		return new String[] { "/" };
 	}
+	
 
 }
 

@@ -13,6 +13,8 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
@@ -21,7 +23,7 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 @EnableWebMvc
 @ComponentScan(basePackages="com.miladavukovic.diplomski")
 @PropertySource("classpath:persistence-mysql.properties")
-public class AppConfig {
+public class AppConfig implements WebMvcConfigurer{
 
 	// set up variable to hold the properties
 	
@@ -33,8 +35,11 @@ public class AppConfig {
 		private Logger logger = Logger.getLogger(getClass().getName());
 		
 		
-		// define a bean for ViewResolver
+		public void addResourceHandlers(final ResourceHandlerRegistry registry) {
+	        registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+	    }
 
+		// define a bean for ViewResolver
 		@Bean
 		public ViewResolver viewResolver() {
 			
