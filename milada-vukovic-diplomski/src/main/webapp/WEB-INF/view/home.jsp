@@ -37,28 +37,26 @@
 			<div class="cover-container">
 
 				<div class="masthead clearfix">
-					<div class="inner">
-						<h3 class="masthead-brand">Meni</h3>
+					<div class="inner">				
 						<nav>
 							<ul class="nav masthead-nav">
-								<li class="active"><a href="#">Link 1</a></li>
-								<li><a href="#">Link 2</a></li>
-								<li><a href="#">Link 3</a></li>
+								<li class="active"><a href="#">Početna</a></li>
+								<li><a href="${pageContext.request.contextPath}/newPlan">Novi
+										dnevni plan</a></li>
+								<li><a href="#">Nedeljni pregled</a></li>
+								<li><form:form
+										action="${pageContext.request.contextPath}/logout"
+										method="POST">
+										<button type="submit" class="linkButton">Izloguj me</button>
+									</form:form></li>
 							</ul>
 						</nav>
 					</div>
 				</div>
 
 				<div class="inner cover">
-					<h1 class="cover-heading">FEST 2018</h1>
+					<h1 class="cover-heading">Moj planer</h1>
 					<p class="lead">Dobrodošli na početnu stranu!</p>
-					<p class="lead">
-						<form:form action="${pageContext.request.contextPath}/logout"
-							method="POST">
-							<input class="btn btn-lg btn-default" type="submit"
-								value="Izloguj me" />
-						</form:form>
-					</p>
 				</div>
 
 				<div class="mastfoot">
