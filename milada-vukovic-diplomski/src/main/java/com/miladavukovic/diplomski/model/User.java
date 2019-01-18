@@ -1,9 +1,29 @@
 package com.miladavukovic.diplomski.model;
 
-public class User {
+import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="users")
+public class User implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="username")
 	private String username;
 
+	@Column(name="password")
 	private String password;
 
 	public String getUsername() {
@@ -21,5 +41,22 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	@Override
+	public boolean equals(Object arg0) {
+		return super.equals(arg0);
+	}
+
+	@Override
+	public int hashCode() {
+		return super.hashCode();
+	}
+
+	@Override
+	public String toString() {
+		return super.toString();
+	}
+	
+	
 
 }
